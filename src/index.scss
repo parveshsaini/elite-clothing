@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

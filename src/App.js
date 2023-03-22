@@ -2,6 +2,7 @@ import {Routes, Route} from 'react-router-dom';
 
 import Navigation from './routes/navigation/navigation.component';
 import Home from "./routes/home/home.component";
+import SignIn from './routes/sign-in/sign-in.component';
 
 const Shop= ()=>{
   return(
@@ -20,6 +21,8 @@ const App = () => {
          <Route index={true} element={<Home/>} /> {/*Now Home component will also be shown along with navigation upon land '/' */}
 
          <Route path='shop' element={<Shop/>} />
+
+         <Route path='sign-in' element={<SignIn/>} />
 
       </Route>
       
