@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 
 import {initializeApp} from 'firebase/app' //used to tell firebase that this instance should relate to our project created on firebase
 
-import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 
 import {getFirestore, doc, getDoc, setDoc } from 'firebase/firestore' //remember collection,document,data. using doc we're importing document instance
 
@@ -71,4 +71,9 @@ export const createAuthUserWithEmailAndPassword = async(email, password ) =>{
   if(!email || !password) return;
 
   return await createUserWithEmailAndPassword(auth, email, password)
+}
+export const signInAuthUserWithEmailAndPassword = async(email, password ) =>{
+  if(!email || !password) return;
+
+  return await signInAuthUserWithEmailAndPassword(auth, email, password)
 }
